@@ -40,13 +40,10 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+              <a class="nav-link js-scroll-trigger" href="../main/index.html">Main</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+              <a class="nav-link js-scroll-trigger" href="../writer/index.html">Write an EDLE</a>
             </li>
           </ul>
         </div>
@@ -146,6 +143,21 @@
         <i class="fa fa-chevron-up"></i>
       </a>
     </div>
+
+    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDR3pnWcOUi5hlcf-Ux0gaXVewpKP22t-o",
+        authDomain: "edle-ce623.firebaseapp.com",
+        databaseURL: "https://edle-ce623.firebaseio.com",
+        projectId: "edle-ce623",
+        storageBucket: "",
+        messagingSenderId: "293501084886"
+      };
+      firebase.initializeApp(config);
+    </script>
+
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
