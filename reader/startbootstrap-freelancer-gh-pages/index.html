@@ -21,9 +21,13 @@
     <!-- Custom styles for this template -->
     <link href="css/freelancer.css" rel="stylesheet">
 
+    <!-- Angular-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="js/app.js"></script>
+
   </head>
 
-  <body id="page-top">
+  <body id="page-top" ng-app="myApp" ng-controller="myCtrl">
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -52,21 +56,11 @@
     <!-- About Section -->
     <section class="success" id="get-started">
       <div class="container">
-        <h2 class="text-center">Get Started!</h2>
+        <h2 class="text-center">What are you looking for? :D</h2>
         <hr class="star-light">
-        <div class="row">
-          <div class="col-lg-4 ml-auto">
-            <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
-          </div>
-          <div class="col-lg-4 mr-auto">
-            <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
-          </div>
-          <div class="col-lg-8 mx-auto text-center">
-            <a href="#" class="btn btn-lg btn-outline">
-              <i class="fa fa-download"></i>
-              Download Theme
-            </a>
-          </div>
+        <div class="text-center">
+              <p><big><big><big><br/><p style="text-align:center">Curious about life in certain careers? <br /> <br />Check out these search options! <br /><br/>
+                We'll help you find<br /> real people <br />working real jobs <br />that you might think are cool!</big></big></big></p>
         </div>
       </div>
     </section>
@@ -74,45 +68,49 @@
     <!-- Contact Section -->
     <section id="contact">
       <div class="container">
-        <h2 class="text-center">Contact Me</h2>
+        <h2 class="text-center">Search</h2>
         <hr class="star-primary">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-            <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
             <form name="sentMessage" id="contactForm" novalidate>
               <div class="control-group">
                 <div class="form-group floating-label-form-group controls">
                   <label>Name</label>
-                  <input class="form-control" id="name" type="text" placeholder="Name" required data-validation-required-message="Please enter your name.">
+                  <input class="form-control" id="name" type="text" placeholder="Name" ng-model="name">
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
               <div class="control-group">
                 <div class="form-group floating-label-form-group controls">
-                  <label>Email Address</label>
-                  <input class="form-control" id="email" type="email" placeholder="Email Address" required data-validation-required-message="Please enter your email address.">
+                  <label>Degree, University </label>
+                  <input class="form-control" id="company" type="text" placeholder="Degree, University" ng-model="degree">
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
               <div class="control-group">
                 <div class="form-group floating-label-form-group controls">
-                  <label>Phone Number</label>
-                  <input class="form-control" id="phone" type="tel" placeholder="Phone Number" required data-validation-required-message="Please enter your phone number.">
+                  <label>Job Title</label>
+                  <input class="form-control" id="jobTitle" type="text" placeholder="Job Title" ng-model="jobTitle">
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
               <div class="control-group">
                 <div class="form-group floating-label-form-group controls">
-                  <label>Message</label>
-                  <textarea class="form-control" id="message" rows="5" placeholder="Message" required data-validation-required-message="Please enter a message."></textarea>
+                  <label>Company</label>
+                  <input class="form-control" id="company" type="text" placeholder="Company" ng-model="company">
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
+              <div class="control-group">
+                <div class="form-group floating-label-form-group controls">
+                  <label>City, State</label>
+                  <input class="form-control" id="state" type="text" placeholder="City, State" ng-model="location">
+                  <p class="help-block text-danger"></p>
+                </div>
               <br>
               <div id="success"></div>
               <div class="form-group">
-                <button type="submit" class="btn btn-success btn-lg" id="sendMessageButton">Send</button>
+                <button type="submit" class="btn btn-success btn-lg" id="sendMessageButton" ng-click="submit()">Send</button>
               </div>
             </form>
           </div>
@@ -123,47 +121,10 @@
     <!-- Footer -->
     <footer class="text-center">
       <div class="footer-above">
-        <div class="container">
-          <div class="row">
-            <div class="footer-col col-md-4">
-              <h3>Location</h3>
-              <p>3481 Melrose Place
-                <br>Beverly Hills, CA 90210</p>
-            </div>
-            <div class="footer-col col-md-4">
-              <h3>Around the Web</h3>
-              <ul class="list-inline">
-                <li class="list-inline-item">
-                  <a class="btn-social btn-outline" href="#">
-                    <i class="fa fa-fw fa-facebook"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a class="btn-social btn-outline" href="#">
-                    <i class="fa fa-fw fa-google-plus"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a class="btn-social btn-outline" href="#">
-                    <i class="fa fa-fw fa-twitter"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a class="btn-social btn-outline" href="#">
-                    <i class="fa fa-fw fa-linkedin"></i>
-                  </a>
-                </li>
-                <li class="list-inline-item">
-                  <a class="btn-social btn-outline" href="#">
-                    <i class="fa fa-fw fa-dribbble"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer-col col-md-4">
-              <h3>About Freelancer</h3>
-              <p>Freelance is a free to use, open source Bootstrap theme created by
-                <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+        <div class="container" id="search-results">
+          <div class="col">
+            <div class="footer-col" ng-repeat="result in results">
+            <a href="">{{result["name"]}}</a>
             </div>
           </div>
         </div>
@@ -192,10 +153,6 @@
 
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
 
     <!-- Custom scripts for this template -->
     <script src="js/freelancer.min.js"></script>
