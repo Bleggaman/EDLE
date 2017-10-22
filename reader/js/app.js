@@ -25,7 +25,7 @@ app.controller('myCtrl', function($scope) {
         {"name": "jim", "jobTitle":"webdev", "company":"google", "state":"san francisco", "city": "california"}
       ];
 
-      data = [
+     /*  data = [
     {
       "bio" : "",
       "company" : "Your Company",
@@ -44,7 +44,7 @@ app.controller('myCtrl', function($scope) {
       "location" : "Seattle, WA",
       "name" : "Varun Viswanath",
       "profile_pic" : ""
-    }];
+    }];*/
 
       $scope.name = "";
       $scope.jobTitle ="";
