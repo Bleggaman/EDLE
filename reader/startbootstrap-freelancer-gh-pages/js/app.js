@@ -33,16 +33,12 @@ app.controller('myCtrl', function($scope) {
 
       $scope.results = []
 
-      $scope.submit = function() {
+      $scope.submit = function submit() {
           var query = {"name" :$scope.name, "jobTitle": $scope.jobTitle, "company": $scope.company, "state": $scope.state, "city": $scope.city};
-          var matches = data.filter((entry) => isMatch(query, entry));
-          alert(JSON.stringify(matches, null, 2));
-          $scope.result = []
-          matches.forEach((entry) => {
-            $scope.results.push(entryToElement(entry));
-          });
+          $scope.results = [];
+          $scope.results = data.filter((entry) => $scope.isMatch(query, entry));
         }
-      
+        
         $("a[data-toggle=\"tab\"]").click(function(e) {
           e.preventDefault();
           $(this).tab("show");

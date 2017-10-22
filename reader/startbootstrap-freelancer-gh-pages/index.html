@@ -121,7 +121,7 @@
               <br>
               <div id="success"></div>
               <div class="form-group">
-                <button type="submit" class="btn btn-success btn-lg" id="sendMessageButton" ng-onclick="submit()">Send</button>
+                <button type="submit" class="btn btn-success btn-lg" id="sendMessageButton" ng-click="submit()">Send</button>
               </div>
             </form>
           </div>
@@ -135,7 +135,7 @@
         <div class="container" id="search-results">
           <div class="col">
             <div class="footer-col" ng-repeat="result in results">
-              {{result}}
+            <a href="">{{result["name"]}}</a>
             </div>
           </div>
         </div>
@@ -164,8 +164,6 @@
 
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <script src="js/search.js"></script>
 
     <!-- Custom scripts for this template -->
     <script src="js/freelancer.min.js"></script>
