@@ -31,7 +31,7 @@ body {
 
 /* Custom Button Styles */
 .btn-dark {
-  color: #bfca00;
+  color: #ebfb01;
   border: none;
   border-radius: 0;
   background-color: #125753;
@@ -40,7 +40,7 @@ body {
 .btn-dark:hover, .btn-dark:focus, .btn-dark:active {
   color: #fff;
   /* color: #02a63a; */
-  background-color: #bfca00;
+  background-color: #ebfb01;
 }
 
 .btn-light {
@@ -176,9 +176,11 @@ h1 {
   color: #02a63a;
 }
 
+
 h3 {
   color: #02a63a;
 }
+
 
 /* About */
 /*
